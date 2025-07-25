@@ -1,6 +1,10 @@
 # Collaborative Filtering Recommender Systems
 
-In this notebook we'll build a movie recommendation system using collaborative filtering. Specifically, it involves implementing and optimizing a collaborative filtering cost function to learn feature vectors for movies and preference parameters for users based on historical movie ratings. The model predicts a user's potential rating for an unrated movie based on learned user and item vectors and their biases. The collaborative filtering algorithm should minimize the cost function representing the error between actual and predicted ratings, including regularization to prevent overfitting.
+This notebook presents the development of a collaborative filtering recommender system for predicting movie preferences. It uses a reduced subset of the MovieLens dataset, which includes thousands of user-movie ratings. The model captures patterns by representing users and movies as vectors within a shared feature space, where predicted ratings are computed through vector interactions and user-specific bias terms.
+
+The collaborative filtering cost function is implemented from scratch, with regularization included to improve generalization and prevent overfitting. Both loop-based and vectorized versions of the function are provided to balance clarity and performance. Training is done through a custom loop built with TensorFlow’s GradientTape, allowing direct control over the optimization process and efficient parameter updates.
+
+Once trained, the model can accept user-defined movie ratings to generate personalized predictions for unseen titles. The output is refined using Pandas filtering techniques, allowing recommendations to be sorted and interpreted based on average ratings and popularity metrics.
 
 ## Results
 
